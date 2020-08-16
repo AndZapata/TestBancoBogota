@@ -14,7 +14,7 @@
     <tr class="text-center">
       <th scope="row">{{ person.person_id }}</th>
       <td>{{ person.name }}</td>
-      <td>{{ person.birth | date: 'yyyy-MM-dd' }}</td>
+      <td>{{ person.birth | date: 'dd-MM-yyyy' }}</td>
       <td>{{ person.father_id == 0 ? 0 : person.father_id}}</td>
       <td>{{ person.mother_id == 0 ? 0 : person.mother_id }}</td>
       <td>{{ person.child_id == 0 ? 0 : person.child_id}}</td>

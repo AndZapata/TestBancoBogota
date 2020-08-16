@@ -12,6 +12,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { PersonListComponent } from './components/person-list/person-list.component';
 
 import { PeopleService } from './services/people.service';
+import { PersonUpdateFormComponent } from './components/person-update-form/person-update-form.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { PeopleService } from './services/people.service';
     PersonFormComponent,
     NavigationComponent,
     PersonListComponent,
+    PersonUpdateFormComponent,
   ],
   imports: [
     BrowserModule,

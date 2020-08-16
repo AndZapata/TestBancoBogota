@@ -21,8 +21,18 @@
             class="form-control"
           />
         </div>
-        <button class="btn btn-primary btn-block" (click)="saveNewPerson()">
-          Submit!
+
+        <div class="form-group">
+          <input
+            type="text"
+            name="fatherName"
+            placeholder="Nombre del padre"
+            class="form-control"
+          />
+        </div>
+
+        <button class="btn btn-primary btn-block" (click)="updatePerson()">
+          Update!
         </button>
       </form>
     </div>
@@ -32,8 +42,8 @@
 <div class="col-md-4">
   <div class="card card-body text-center h-100">
     <i class="fa fa-user fa-5x" aria-hidden="true"></i>
-    <h3>{{person.name == '' ? 'Nombre' : person.name}}</h3>
-    <h4>{{person.birth | date: 'dd-MM-yyyy'}}</h4>
-    <p>{{person.father_id ? '' : person.father_id}}</p>
+    <h3>{{ person.name == "" ? "Nombre" : person.name }}</h3>
+    <h4>{{ person.birth | date: "dd-MM-yyyy" }}</h4>
+    <p>{{ person.father_id ? "" : person.father_id }}</p>
   </div>
 </div>

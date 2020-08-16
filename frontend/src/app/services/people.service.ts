@@ -13,6 +13,10 @@ export class PeopleService {
     return this.http.get(`${this.API_URI}`);
   }
 
+  getPerson(id: string) {
+    return this.http.get(`${this.API_URI}/${id}`);
+  }
+
   savePeople(person: Person) {
     return this.http.post(`${this.API_URI}`, person);
   }
@@ -22,6 +26,6 @@ export class PeopleService {
   }
 
   updatePersonById(id: number, updatedData) {
-    return this.http.put(`${this.API_URI}/delete/${id}`, updatedData);
+    return this.http.put(`${this.API_URI}/${id}`, updatedData);
   }
 }
