@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PersonListComponent } from './components/person-list/person-list.component';
+import { PersonFormComponent } from './components/person-form/person-form.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,14 @@ const routes: Routes = [
   {
     path: 'people',
     component: PersonListComponent
+  },
+  {
+    path: 'person/add',
+    component: PersonFormComponent
+  },
+  {
+    path: 'person/edit/:id',
+    component: PersonFormComponent
   }
 ];
 

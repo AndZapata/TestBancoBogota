@@ -14,15 +14,15 @@
     <tr class="text-center">
       <th scope="row">{{ person.person_id }}</th>
       <td>{{ person.name }}</td>
-      <td>{{ person.birth }}</td>
-      <td>{{ person.father_id }}</td>
-      <td>{{ person.mother_id }}</td>
-      <td>{{ person.child_id }}</td>
+      <td>{{ person.birth | date: 'yyyy-MM-dd' }}</td>
+      <td>{{ person.father_id == 0 ? 0 : person.father_id}}</td>
+      <td>{{ person.mother_id == 0 ? 0 : person.mother_id }}</td>
+      <td>{{ person.child_id == 0 ? 0 : person.child_id}}</td>
       <td>
-        <button class="btn btn-danger mx-1">
+        <button class="btn btn-danger m-1" (click)="deletePerson(person.person_id)">
           <i class="fa fa-trash-o" aria-hidden="true"></i>
         </button>
-        <button class="btn btn-success mx-1">
+        <button class="btn btn-success m-1" [routerLink]="['/person/edit', person.person_id]">
           <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         </button>
       </td>
