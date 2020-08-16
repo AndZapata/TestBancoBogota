@@ -11,13 +11,13 @@ exports.create = (req, res) => {
   }
 
   const birth = new Date(req.body.birth);
-  // Create a Tutorial
+  // Create a Person
   const person = {
     name: req.body.name,
     birth,
   };
 
-  // Save Tutorial in the database
+  // Save Person in the database
   Person.create(person)
     .then((data) => {
       res.send(data);
@@ -30,6 +30,7 @@ exports.create = (req, res) => {
     });
 };
 
+// Find all active people
 exports.findAll = (req, res) => {
   Person.findAll({ where: { "active/inactive": true } })
     .then((data) => {
@@ -42,8 +43,9 @@ exports.findAll = (req, res) => {
     });
 };
 
+// Find person by id
 exports.findOne = (req, res) => {
-  const personId = req.params.person_id;
+  const personId = req.params.id;
 
   Person.findByPk(personId)
     .then((data) => {
@@ -56,6 +58,7 @@ exports.findOne = (req, res) => {
     });
 };
 
+// Update person by id
 exports.update = (req, res) => {
   const personId = req.params.id;
 
@@ -80,6 +83,7 @@ exports.update = (req, res) => {
     });
 };
 
+// Delete person by id
 exports.delete = (req, res) => {
   const personId = req.params.id;
 
