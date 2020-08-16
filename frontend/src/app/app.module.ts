@@ -1,24 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
-import { PersonFormComponent } from './person-form/person-form.component';
+import { PersonFormComponent } from './components/person-form/person-form.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { PersonListComponent } from './components/person-list/person-list.component';
+
+import { PeopleService } from './services/people.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonFormComponent
+    PersonFormComponent,
+    NavigationComponent,
+    PersonListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    FormsModule,
+    HttpClientModule],
+  providers: [PeopleService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
