@@ -18,5 +18,5 @@ The current project is the version 0.1 of a single page form for creating person
 3. In a new terminal:
     3.1 Go to the frontend folder (since backend it would be) `cd ../frontend`.
     3.2 Once inside install the dependencies for running correctly the front `npm install`.
-    3.3 Once the process has finished just run the command as it is specified inside the package.json `ng start -- open`
+    3.3 Once the process has finished just run the command as it is specified inside the package.json `ng serve --open`
 
